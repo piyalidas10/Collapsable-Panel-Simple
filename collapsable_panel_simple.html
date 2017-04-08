@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Angularjs Collapsable Panel simple</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<style>
+	body{ background:#F5F5F5;}
+	section{ margin-top:20px;}
+	.nav-pills li a{color:#FFF; font-size:16px; background: #272e35;border-radius: 4px 4px 0 0;}
+	.nav-pills > li > a:focus,.nav-pills > li > a:hover,.nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover{ background:#009640;}
+	.panel{ padding:15px; border:#DDD 1px solid;}
+</style>
+</head>
+
+<body ng-app="">
+
+	<section class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 xol-xs-offset-1" ng-init="tab=2">
+        <ul class="nav nav-pills">
+            <li ng-class="{active : tab === 1}">
+                <a href ng-click="tab=1">Tab 1</a>
+            </li>
+            <li ng-class="{active : tab === 2}">
+                <a href ng-click="tab=2">Tab 2</a>
+            </li>
+            <li ng-class="{active : tab === 3}">
+                <a href ng-click="tab=3">Tab 3</a>
+            </li>
+        </ul>
+        <div class="panel">
+            <div class="panel-body" ng-show="tab === 1">
+                <h3>Tab 1 Content</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi commodi facere odit alias velit ducimus accusantium maiores, mollitia vitae eum quae maxime labore, quia non consequatur culpa similique, molestiae dicta.</p>
+            </div>
+            <div class="panel-body" ng-show="tab === 2">
+                <h3>Tab 2 Content</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi commodi facere odit alias velit ducimus accusantium maiores, mollitia vitae eum quae maxime labore, quia non consequatur culpa similique, molestiae dicta.</p>
+            </div>
+            <div class="panel-body" ng-show="tab === 3">
+                <h3>Tab 3 Content</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi commodi facere odit alias velit ducimus accusantium maiores, mollitia vitae eum quae maxime labore, quia non consequatur culpa similique, molestiae dicta.</p>
+            </div>
+        </div>    
+     </section>   
+
+</body>
+</html>
